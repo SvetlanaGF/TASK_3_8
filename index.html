@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ДЗ № 3.8</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<!-- Отображение отзывов -->
+    <form method="POST" action="review.php">
+        <input class="button" type="submit" value="Получить отзывы">
+    </form>
+<!-- Добавление отзывов -->
+<form method="POST" action="review.php">
+  <label for="product_id">Артикул товара:</label>
+  <input type="text" name="product_id" id="product_id" required><br>
+
+  <label for="user_name">Напишите ваше имя:</label>
+  <input type="text" name="user_name" id="user_name" required><br>
+
+  <label for="rating">Оцените товар (от 1 до 5):</label>
+  <input type="number" name="rating" id="rating" min="1" max="5" required><br>
+
+  <label for="comment">Напишите ваш отзыв:</label>
+  <textarea name="comment" id="comment" required></textarea><br>
+
+  <input class="button_review" type="submit" value="Отправить отзыв">
+</form>
+  <!-- Форма для отмены заказа -->
+
+  <form method="POST" action="cancel.php" >
+    <label for="order_id">Для отмены заказа укажите его номер:</label>
+    <input type="text" name="order_id" id="order_id" required>
+  
+    <label for="reason">Причина отмены (необязательно):</label>
+    <textarea name="reason" id="reason"></textarea>
+  
+    <input class="button_cancel" type="submit" value="Отменить заказ">
+  </form>
+
+
+
+</body>
+</html>
